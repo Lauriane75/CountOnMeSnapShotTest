@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 guard let self = self else { return }
                 if case .alert(title: let title, message: let message) = screen {
-                    self.presentAlert(on: self, with: title, message: message)
+                    AlertPresenter().presentAlert(on: self, with: title, message: message)
                 }
             }
         }
